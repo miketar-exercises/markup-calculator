@@ -29,7 +29,8 @@ public class MarkupCalculatorBOImplTest {
 	@Test(dataProvider = "finalCostCalculationData")
 	public void testFinalCostCalculation(double basePrice, int peopleCnt, String category, double expectedFinalCost) {
 		double finalCost = markupCalc.calculateFinalCost(basePrice, peopleCnt, category);
-		Assert.assertEquals(finalCost, expectedFinalCost);
+		double roundedCost = Math.round(finalCost * 100.0) / 100.0;
+		Assert.assertEquals(roundedCost, expectedFinalCost);
 	}
 
 	/**
