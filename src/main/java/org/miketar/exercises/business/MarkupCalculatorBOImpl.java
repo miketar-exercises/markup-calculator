@@ -1,9 +1,5 @@
 package org.miketar.exercises.business;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Basic implementation of {@link MarkupCalculatorBO}
  * 
@@ -11,7 +7,6 @@ import java.util.Map;
  *
  */
 public class MarkupCalculatorBOImpl implements MarkupCalculatorBO {
-
 
 	/**
 	 * Default markup calculator method calculates only variable markup
