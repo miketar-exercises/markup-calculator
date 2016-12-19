@@ -1,6 +1,7 @@
 package org.miketar.exercises.business;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -24,6 +25,15 @@ public abstract class MarkupCalculatorBOTest {
 	public void testFinalCostCalculation(double basePrice, int peopleCnt, String category, double expectedFinalCost) {
 		double finalCost = getMarkupCalculator().calculateFinalCost(basePrice, peopleCnt, category);
 		double roundedCost = Math.round(finalCost * 100.0) / 100.0;
+		Reporter.log("Validating Calculator: " + getMarkupCalculator().getClass().getName(), true);
+		Reporter.log("-- Input: ", true);
+		Reporter.log("---- base price = " + basePrice, true);
+		Reporter.log("---- people cnt = " + peopleCnt, true);
+		Reporter.log("---- category = " + category, true);
+		Reporter.log("-- Output: ", true);
+		Reporter.log("---- final Cost = " + roundedCost, true);
+		Reporter.log("-- Expected: ", true);
+		Reporter.log("---- final Cost = " + expectedFinalCost, true);
 		Assert.assertEquals(roundedCost, expectedFinalCost);
 	}
 
