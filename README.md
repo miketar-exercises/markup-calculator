@@ -1,5 +1,7 @@
 # Markup Calculator
 
+[![Build Status](https://travis-ci.org/miketar-exercises/markup-calculator.svg?branch=develop)](https://travis-ci.org/miketar-exercises/markup-calculator)
+
 ## Overview 
 
 Markup Calculator takes care of calculation of a final cost of the project introducing various markups 
