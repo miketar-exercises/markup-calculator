@@ -51,7 +51,7 @@ public class MarkupCalculatorBOImpl implements MarkupCalculatorBO {
 	 * @return
 	 */
 	protected double categoryMarkup(String category) {
-		if (category != null && category.compareTo("") != 0) {
+		if (Utils.isNotEmpty(category)) {
 			if (MarkupConstants.CATEGORIES_MARKUP.containsKey(category))
 				return MarkupConstants.CATEGORIES_MARKUP.get(category);
 		}

@@ -60,7 +60,7 @@ public class ConfigurableMarkupCalculator extends MarkupCalculatorBOImpl {
 	 */
 	protected double readDoubleProperty(String label, double defaultValue) {
 		String markup = this.readProperty(label, Double.toString(defaultValue));
-		if (markup != null && markup.compareTo("") != 0) {
+		if (Utils.isNotEmpty(markup)) {
 			return Double.parseDouble(markup);
 		}
 		return defaultValue;
@@ -76,7 +76,7 @@ public class ConfigurableMarkupCalculator extends MarkupCalculatorBOImpl {
 	 * @return property value or default if reading fails
 	 */
 	protected String readProperty(String label, String defaultVaule) {
-		if (label != null && label.compareTo("") != 0) {
+		if (Utils.isNotEmpty(label)) {
 			if (properties == null)
 				loadProperties();
 
@@ -98,7 +98,7 @@ public class ConfigurableMarkupCalculator extends MarkupCalculatorBOImpl {
 	 * 
 	 */
 	protected String generateFullPropertyLabel(String label) {
-		if (label != null && label.compareTo("") != 0) {
+		if (Utils.isNotEmpty(label)) {
 			return MarkupConstants.Properties.PREFIX + label;
 		}
 		return label;
