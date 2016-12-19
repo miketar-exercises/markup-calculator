@@ -13,7 +13,7 @@ public class Utils {
 	 * @param value string to check
 	 * @return true is not empty, false otherwise
 	 */
-	public boolean isNotEmpty(String value){
+	public static boolean isNotEmpty(String value){
 		return value != null && value.compareTo("") != 0;
 	}
 	
