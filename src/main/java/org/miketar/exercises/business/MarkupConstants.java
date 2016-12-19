@@ -28,5 +28,12 @@ public class MarkupConstants {
 		catsMarkup.put("electronics", 0.02);
 		CATEGORIES_MARKUP = Collections.unmodifiableMap(catsMarkup);
 	}
+	
+	protected class Properties {
+		public final static String CATEGORIES = "categories";
+		public final static String FLAT = "flat";
+		public final static String PERSON = "person";
+		public final static String PREFIX = "markup.";
+	}
 
 }
