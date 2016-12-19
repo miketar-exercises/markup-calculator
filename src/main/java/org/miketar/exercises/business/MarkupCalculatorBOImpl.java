@@ -12,28 +12,6 @@ import java.util.Map;
  */
 public class MarkupCalculatorBOImpl implements MarkupCalculatorBO {
 
-	/**
-	 * Flat markup value
-	 */
-	protected final static double FLAT_MARKUP = 0.05;
-
-	/**
-	 * One Person markup value
-	 */
-	protected final static double PERSON_MARKUP = 0.012;
-
-	/**
-	 * Categories markups
-	 */
-	private static final Map<String, Double> categoriesMarkup;
-
-	static {
-		Map<String, Double> catsMarkup = new HashMap<String, Double>();
-		catsMarkup.put("food", 0.13);
-		catsMarkup.put("drugs", 0.075);
-		catsMarkup.put("electronics", 0.02);
-		categoriesMarkup = Collections.unmodifiableMap(catsMarkup);
-	}
 
 	/**
 	 * Default markup calculator method calculates only variable markup
@@ -58,7 +36,7 @@ public class MarkupCalculatorBOImpl implements MarkupCalculatorBO {
 	 * @return double value of the flat markup
 	 */
 	protected double flatMarkup() {
-		return FLAT_MARKUP;
+		return MarkupConstants.FLAT_MARKUP;
 	}
 
 	/**
@@ -68,7 +46,7 @@ public class MarkupCalculatorBOImpl implements MarkupCalculatorBO {
 	 * @return
 	 */
 	protected double peopleMarkup(int peopleCnt) {
-		return peopleCnt * PERSON_MARKUP;
+		return peopleCnt * MarkupConstants.PERSON_MARKUP;
 	}
 
 	/**
@@ -79,8 +57,8 @@ public class MarkupCalculatorBOImpl implements MarkupCalculatorBO {
 	 */
 	protected double categoryMarkup(String category) {
 		if (category != null && category.compareTo("") != 0) {
-			if (categoriesMarkup.containsKey(category))
-				return categoriesMarkup.get(category);
+			if (MarkupConstants.CATEGORIES_MARKUP.containsKey(category))
+				return MarkupConstants.CATEGORIES_MARKUP.get(category);
 		}
 		return 0;
 	}
