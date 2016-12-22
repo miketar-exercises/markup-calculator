@@ -1,6 +1,8 @@
 # Markup Calculator
 
 [![Build Status](https://travis-ci.org/miketar-exercises/markup-calculator.svg?branch=develop)](https://travis-ci.org/miketar-exercises/markup-calculator)
+[![codecov](https://codecov.io/gh/miketar-exercises/markup-calculator/branch/develop/graph/badge.svg)](https://codecov.io/gh/miketar-exercises/markup-calculator)
+
 
 ## Overview 
 
