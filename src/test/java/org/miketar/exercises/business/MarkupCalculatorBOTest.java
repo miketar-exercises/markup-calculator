@@ -31,9 +31,9 @@ public abstract class MarkupCalculatorBOTest {
 		Reporter.log("---- people cnt = " + peopleCnt, true);
 		Reporter.log("---- category = " + category, true);
 		Reporter.log("-- Output: ", true);
-		Reporter.log("---- final Cost = " + roundedCost, true);
+		Reporter.log("---- final cost = " + roundedCost, true);
 		Reporter.log("-- Expected: ", true);
-		Reporter.log("---- final Cost = " + expectedFinalCost, true);
+		Reporter.log("---- final cost = " + expectedFinalCost, true);
 		Assert.assertEquals(roundedCost, expectedFinalCost);
 	}
 
